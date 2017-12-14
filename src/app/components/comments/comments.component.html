@@ -1,0 +1,9 @@
+<div>
+  <form>
+    <input [(ngModel)]="comment" name="comment" type="text" placeholder="Añade un comentario...">
+    <button (click)="sendComment()" type="submit">Enviar</button>
+  </form>
+</div>
+<div *ngFor="let comment of comments">
+  <p>{{comment.id}} - {{comment.comment}}</p> <button (click)="eliminar($event.currentTarget.value)" value="{{comment.id}}">Borrar</button>
+</div>
