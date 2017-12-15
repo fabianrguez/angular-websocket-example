@@ -4,10 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import {FormsModule} from '@angular/forms';
-import { StompService } from 'ng2-stomp-service';
 import {StompRService} from '@stomp/ng2-stompjs';
-
-
 
 @NgModule({
   declarations: [
