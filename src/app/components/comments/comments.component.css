@@ -1,6 +1,43 @@
-#comment {
-  width: 800px;
-}
 #form {
-  padding-bottom: 10px;
+  position: fixed;
+  width: 90%;
+  bottom: 0;
+  padding-left: 10px;
 }
+
+@media (max-device-height: 1920px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 900px;
+    overflow: auto;
+  }
+}
+
+@media (max-device-height: 1200px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 900px;
+    overflow: auto;
+  }
+}
+
+@media (max-device-height: 736px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 650px;
+    overflow: auto;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
