@@ -2,17 +2,19 @@ import {Injectable} from '@angular/core';
 import {StompConfig, StompRService} from '@stomp/ng2-stompjs';
 import * as SockJS from 'sockjs-client';
 import {Observable} from 'rxjs/Observable';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class WebSocketsService {
 
   private config: StompConfig;
+  private url: string= environment.api;
 
   constructor(private stomp: StompRService) {}
 
   public connect(uri: string): void {
     this.config = {
-      url: () => new SockJS('https://secret-lake-30992.herokuapp.com' + uri),
+      url: () => new SockJS(this.url + uri),
       headers: {},
       heartbeat_in: 0,
       heartbeat_out: 20000,

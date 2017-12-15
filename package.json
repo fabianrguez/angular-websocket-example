@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +26,7 @@
     "@types/sockjs-client": "^1.0.32",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "ng2-stomp-service": "^1.2.2",
     "rxjs": "^5.5.2",

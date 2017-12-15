@@ -13,6 +13,7 @@ export class CommentsComponent implements OnInit {
 
   public comment: string;
   public comments: Comment[] = [];
+  public timestamp: string;
 
   constructor(private webSocketsService: WebSocketsService) { }
 
@@ -29,7 +30,8 @@ export class CommentsComponent implements OnInit {
   }
 
   public sendComment(): void {
-    const comment: Comment = new Comment(this.comment);
+    this.timestamp = new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString();
+    const comment: Comment = new Comment(this.comment, this.timestamp);
     this.comment = '';
     this.webSocketsService.publish('/app/comment/add', comment);
   }

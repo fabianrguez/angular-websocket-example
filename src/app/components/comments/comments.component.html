@@ -12,6 +12,9 @@
   </div>
 
   <div class="row" *ngFor="let comment of comments">
+    <div class="text-muted">
+      {{comment.timestamp}}
+    </div>
     <div class="alert alert-info alert-dismissible" role="alert">
       <b>({{comment.id}})</b> {{comment.comment}}
       <button (click)="eliminar($event.currentTarget.value)" value="{{comment.id}}" type="button" class="close"
